@@ -82,3 +82,13 @@ O projeto utiliza texturas e modelos 3D que remetem ao estilo visual do Minecraf
     ```
 3.  **Abrir na Godot:** Abra a Godot Engine e importe o projeto selecionando o arquivo `project.godot` dentro da pasta clonada.
 4.  **Executar:** Pressione o botão "Play" (ou F5) na Godot Engine para iniciar o jogo.
+
+## Imagens
+
+<img width="1915" height="935" alt="image" src="https://github.com/user-attachments/assets/dd6ddc25-19ec-4d5a-9832-e1a36db0d948" />
+
+<img width="1919" height="961" alt="image" src="https://github.com/user-attachments/assets/e2ac6d7e-8b78-4dbb-baa4-f5d979beb7b2" />
+
+<img width="1919" height="963" alt="image" src="https://github.com/user-attachments/assets/f6f02334-d3db-4d52-adeb-de7bb0ba652d" />
+
+<img width="464" height="308" alt="image 1 (3)" src="https://github.com/user-attachments/assets/300c0814-cefe-4b36-be18-9a8223a5970d" />
