@@ -78,7 +78,7 @@ O projeto utiliza texturas e modelos 3D que remetem ao estilo visual do Minecraf
 1.  **Pré-requisitos:** Instale a **Godot Engine 4.x** (versão compatível com o `config_version=5` do `project.godot`).
 2.  **Clonar o Repositório:**
     ```bash
-    git clone 
+    git clone https://github.com/saraiva142/Game-Fuga-da-Stronghold.git
     ```
 3.  **Abrir na Godot:** Abra a Godot Engine e importe o projeto selecionando o arquivo `project.godot` dentro da pasta clonada.
 4.  **Executar:** Pressione o botão "Play" (ou F5) na Godot Engine para iniciar o jogo.
