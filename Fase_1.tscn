@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj340eh61ltsc"]
+
+[ext_resource type="Script" uid="uid://bhmypftboil6d" path="res://jogador.gd" id="1_vag0n"]
+[ext_resource type="PackedScene" uid="uid://br5ete4ohos0n" path="res://PcModel.glb" id="2_lqw1d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lqw1d"]
+size = Vector3(1, 2.5, 1)
+
+[node name="Fase1" type="Node3D"]
+
+[node name="Jogador" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.004119754, 0)
+script = ExtResource("1_vag0n")
+
+[node name="PcModel" parent="Jogador" instance=ExtResource("2_lqw1d")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1, 1.5, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jogador"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0491464, 1.2443973, 0.8985585)
+shape = SubResource("BoxShape3D_lqw1d")
+
+[node name="Camera3D" type="Camera3D" parent="Jogador"]
+transform = Transform3D(1, 0, 0, 0, 0.87789947, 0.47884512, 0, -0.47884512, 0.87789947, 1.0079958, 2.4152918, 1.015734)
+fov = 75.14861
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Jogador/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.95574164, 0.29420707, 0, -0.29420707, 0.95574164, 0, -0.2317872, -1.3982961)
+light_energy = 1.99
+shadow_enabled = true
+spot_angle = 51.95376

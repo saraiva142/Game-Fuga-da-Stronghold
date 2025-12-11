@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq5xycp6ri31"]
+
+[ext_resource type="Script" uid="uid://dkdxljxbkad6i" path="res://porta.gd" id="1_l8x1m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ij8vj"]
+albedo_color = Color(0.7263897, 0.36091098, 0.15743455, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_axl81"]
+material = SubResource("StandardMaterial3D_ij8vj")
+size = Vector3(2, 3, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nd536"]
+size = Vector3(2, 3, 0.2)
+
+[node name="Porta" type="Area3D"]
+script = ExtResource("1_l8x1m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6341033, 0)
+mesh = SubResource("BoxMesh_axl81")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_nd536")

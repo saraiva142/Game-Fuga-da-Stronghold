@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://b03wopdl4xla0"]
+
+[ext_resource type="Script" uid="uid://n76fmaotrjiu" path="res://moeda.gd" id="1_7xn1b"]
+[ext_resource type="Texture2D" uid="uid://c3n65hygawx63" path="res://enderPearl.png" id="2_jvmwt"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7xn1b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bce4n"]
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("2_jvmwt")
+
+[sub_resource type="QuadMesh" id="QuadMesh_kpn3i"]
+material = SubResource("StandardMaterial3D_bce4n")
+
+[node name="moeda" type="Area3D"]
+script = ExtResource("1_7xn1b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4554626, 0)
+shape = SubResource("SphereShape3D_7xn1b")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4339906, 0)
+mesh = SubResource("QuadMesh_kpn3i")
+
+[node name="Sprite3D" type="Sprite3D" parent="MeshInstance3D2"]
+billboard = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6icyufubb5lv"]
+
+[ext_resource type="MeshLibrary" uid="uid://2b8v7ndyk4y1" path="res://minha_library.tres" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dwh8qh67fbpiy" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bj340eh61ltsc" path="res://Fase_1.tscn" id="2_7mycd"]
+[ext_resource type="PackedScene" uid="uid://b03wopdl4xla0" path="res://moeda.tscn" id="3_272bh"]
+[ext_resource type="PackedScene" uid="uid://cxj21uy5k0neo" path="res://monstro.tscn" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://bpqlig82wcedf" path="res://HUD.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://c183xrx15thya" path="res://Menu.tscn" id="6_272bh"]
+[ext_resource type="PackedScene" uid="uid://xdaxrfds7lbl" path="res://Vitoria.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://cgkqwyqpy4bnk" path="res://Derrota.tscn" id="9_4c57u"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_lquwl")
+cena_jogador = ExtResource("2_7mycd")
+cena_moeda = ExtResource("3_272bh")
+cena_monstro = ExtResource("4_272bh")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_ig7tw")
+
+[node name="HUD" parent="." instance=ExtResource("6_7mycd")]
+
+[node name="Menu" parent="." instance=ExtResource("6_272bh")]
+visible = false
+
+[node name="Vitoria" parent="." instance=ExtResource("8_5vw27")]
+
+[node name="Derrota" parent="." instance=ExtResource("9_4c57u")]
+visible = false

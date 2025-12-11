@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://gf083ph82kbt"]
+
+[ext_resource type="Texture2D" uid="uid://bnqjhnmg07lq6" path="res://chaoMine.jpg" id="1_p6k1t"]
+[ext_resource type="Texture2D" uid="uid://bieqgr5euyxv3" path="res://bookMine.jpg" id="1_xn5t5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_s0lpt"]
+size = Vector3(2, 0.1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75u3c"]
+albedo_texture = ExtResource("1_p6k1t")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6o50"]
+size = Vector3(2, 0.1, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uf7fq"]
+size = Vector3(2, 6, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6k1t"]
+albedo_texture = ExtResource("1_xn5t5")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tfn7a"]
+size = Vector3(2, 3, 2)
+
+[node name="MeshLib_Source" type="Node3D"]
+
+[node name="Chao" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_s0lpt")
+surface_material_override/0 = SubResource("StandardMaterial3D_75u3c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Chao"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chao/StaticBody3D"]
+shape = SubResource("BoxShape3D_y6o50")
+
+[node name="Parede" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9530609, 2)
+mesh = SubResource("BoxMesh_uf7fq")
+surface_material_override/0 = SubResource("StandardMaterial3D_p6k1t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Parede"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parede/StaticBody3D"]
+shape = SubResource("BoxShape3D_tfn7a")

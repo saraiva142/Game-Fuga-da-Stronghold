@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpqlig82wcedf"]
+
+[ext_resource type="Script" uid="uid://s36je2yttn7a" path="res://hud.gd" id="1_efote"]
+[ext_resource type="Texture2D" uid="uid://c3n65hygawx63" path="res://enderPearl.png" id="2_efote"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_efote"]
+font_size = 48
+font_color = Color(1, 0, 0, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_efote")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = 2.0
+offset_right = 968.0
+offset_bottom = 514.0
+grow_horizontal = 2
+scale = Vector2(0.14681688, 0.1608035)
+
+[node name="Icone1" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_efote")
+expand_mode = 2
+
+[node name="Icone2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_efote")
+expand_mode = 2
+
+[node name="Icone3" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_efote")
+expand_mode = 2
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 1030.0
+offset_top = 2.0
+offset_right = 1153.0
+offset_bottom = 69.0
+text = "00:00"
+label_settings = SubResource("LabelSettings_efote")
+metadata/_edit_use_anchors_ = true

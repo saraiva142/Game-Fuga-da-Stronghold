@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxj21uy5k0neo"]
+
+[ext_resource type="PackedScene" uid="uid://bq6tkk7n8j2y0" path="res://DeviSk8.glb" id="1_d3dxs"]
+[ext_resource type="Script" uid="uid://b770cxuuh878v" path="res://monstro.gd" id="1_d5elq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d5elq"]
+size = Vector3(1, 3, 2)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d5elq"]
+radius = 0.7871094
+height = 3.1052246
+
+[node name="Monstro" type="CharacterBody3D" groups=["inimigo"]]
+script = ExtResource("1_d5elq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1907558, 0)
+shape = SubResource("BoxShape3D_d5elq")
+
+[node name="DeviSk8" parent="." instance=ExtResource("1_d3dxs")]
+transform = Transform3D(0.36972752, 0, 0, 0, 0.18915617, 0, 0, 0, 0.20948035, 0, 1.0312457, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1907558, 0)
+shape = SubResource("BoxShape3D_d5elq")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0797119, 0)
+shape = SubResource("CapsuleShape3D_d5elq")
