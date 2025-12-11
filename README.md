@@ -1,5 +1,7 @@
 # Fuga da Stronghold
 
+Joagr: https://saraiva142.itch.io/fuga-da-stronghold
+
 ## Visão Geral do Projeto
 
 O projeto **Fuga da Stronghold** é um jogo eletrônico desenvolvido como trabalho final para a disciplina de **Computação Gráfica**. Inspirado na temática das *Strongholds* do Minecraft, o jogo desafia o jogador a navegar por um labirinto gerado aleatoriamente, com o objetivo de coletar três *Ender Pearls* (Pérolas do Fim) antes que o tempo se esgote, enquanto evita o contato com um monstro.
