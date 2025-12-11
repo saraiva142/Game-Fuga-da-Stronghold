@@ -92,3 +92,7 @@ O projeto utiliza texturas e modelos 3D que remetem ao estilo visual do Minecraf
 <img width="1919" height="963" alt="image" src="https://github.com/user-attachments/assets/f6f02334-d3db-4d52-adeb-de7bb0ba652d" />
 
 <img width="464" height="308" alt="image 1 (3)" src="https://github.com/user-attachments/assets/300c0814-cefe-4b36-be18-9a8223a5970d" />
+
+<img width="1328" height="862" alt="image" src="https://github.com/user-attachments/assets/43171dbe-5e1d-42b2-bf6b-390d9deb389d" />
+
+<img width="1323" height="860" alt="image" src="https://github.com/user-attachments/assets/e45c6da3-135d-464f-b1a4-d4b8a53e0b13" />
